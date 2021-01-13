@@ -1,0 +1,9 @@
+{
+  "acl": {
+    "/example/test": {
+      "roles": [
+        "admin"
+      ]
+    }
+  }
+}

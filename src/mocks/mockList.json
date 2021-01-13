@@ -1,0 +1,64 @@
+{
+    "author": {
+        "name": "David",
+        "lastname": "Castrillon"
+    },
+    "categories": [
+        "Electronica, Audio y Video",
+        "Ipod",
+        "Reproductores",
+        "Air Pods"
+    ],
+    "items": [
+        {
+            "id": "MLA901507324",
+            "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Nuevo",
+            "price": {
+                "currency": "USD",
+                "amount": 2000,
+                "decimals": 2
+            },
+            "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_768935-MCO44395054724_122020-F.webp",
+            "condition": "new",
+            "free_shipping": true
+        },
+
+        {
+            "id": "MLA901507324",
+            "title": "Auriculares Inalámbricos I12 Tws Blanco",
+            "price": {
+                "currency": "COP",
+                "amount": 1173,
+                "decimals": 0
+            },
+            "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_768935-MCO44395054724_122020-F.webp",
+            "condition": "new",
+            "free_shipping": false
+        },
+
+        {
+            "id": "MLA901507324",
+            "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Nuevo",
+            "price": {
+                "currency": "ARS",
+                "amount": 1173,
+                "decimals": 2
+            },
+            "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_768935-MCO44395054724_122020-F.webp",
+            "condition": "new",
+            "free_shipping": true
+        },
+        {
+            "id": "MLA901507324",
+            "title": "Apple Ipod Touch 5g 16gb Negro Igual A Nuevo Completo Nuevo",
+            "price": {
+                "currency": "ARS",
+                "amount": 1173,
+                "decimals": 2
+            },
+            "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_768935-MCO44395054724_122020-F.webp",
+            "condition": "new",
+            "free_shipping": true
+        }
+    ]
+}

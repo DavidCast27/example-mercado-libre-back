@@ -1,0 +1,45 @@
+{
+  "author": "David Castrillon <david.cast27@gmail.com>",
+  "dependencies": {
+    "@google-cloud/storage": "^5.3.0",
+    "awilix": "^4.2.6",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "firebase": "^7.24.0",
+    "helmet": "^4.1.0",
+    "joi": "^17.2.1",
+    "js-yaml": "^3.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.0",
+    "multer": "^1.4.2",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "description": "Ejemplo buscador mercado libre",
+  "devDependencies": {
+    "eslint": "^7.8.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "4fk-store-back",
+  "private": true,
+  "repository": "",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js --watch ./src",
+    "debug": "nodemon --inspect ./src/index.js",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix"
+  },
+  "version": "1.0.0"
+}
