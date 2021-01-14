@@ -20,5 +20,18 @@ Runs the server in the development mode.\
 example: [http://localhost:5000](http://localhost:5000) \
 The server will `NOT` reload if you make edits.
 
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.
+
+### `yarn test:watch`
+
+Launches the test runner in the interactive watch mode.\
+the tests are re-laucheswhen the code changes
+
+### `yarn test:coverage`
+
+Visualize the coverage of the tests performed
+
 
 

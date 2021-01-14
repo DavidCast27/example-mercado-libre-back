@@ -4,8 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = {
-    GOOGLE_APPLICATION_CREDENTIALS: process.env.GOOGLE_APPLICATION_CREDENTIALS,
-    DATABASE_CONNECTION_STRING: process.env.DATABASE_CONNECTION_STRING,
+    BASE_URL: process.env.BASE_URL,
     SWAGGER_PATH: 'src/config/swagger.yml',
     NODE_ENV: process.env.NODE_ENV,
     PORT: process.env.PORT
