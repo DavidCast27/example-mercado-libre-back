@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: 4FK Store API
+  title: mercado libre services example
   description:
     Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/)
     or HTML.

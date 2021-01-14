@@ -59,37 +59,53 @@ class ItemsService {
     async _getItems (results) {
         const resultsSlice = _slice(results, 0, 4);
         return _map(resultsSlice, (item) => {
+            const id = _get(item, 'id', '');
+            const title = _get(item, 'title', '');
+            const picture = _get(item, 'thumbnail', '');
+            const condition = _get(item, 'condition', '');
+            const freeShipping = _get(item, 'shipping.free_shipping', '');
+            const currency = _get(item, 'currency_id');
+            const amount = _get(item, 'price', '');
+            const decimals = 2;
+            const address = _get(item, 'address', {});
             return {
-                id: item.id,
-                title: item.title,
-                picture: item.thumbnail,
-                condition: item.condition,
-                free_shipping: item.shipping.free_shipping,
+                id,
+                title,
+                picture,
+                condition,
+                free_shipping: freeShipping,
                 price: {
-                    currency: item.currency_id,
-                    amount: item.price,
-                    decimals: 2
+                    currency,
+                    amount,
+                    decimals
                 },
-                address: item.address
+                address
             };
         });
     }
 
     async _getItem (item, description) {
-        const pictures = _get(item, 'pictures', []);
-        const picture = _first(pictures);
+        const id = _get(item, 'id', '');
+        const title = _get(item, 'title', '');
+        const picture = _get(item, 'pictures[0].url', '');
+        const condition = _get(item, 'condition', '');
+        const freeShipping = _get(item, 'shipping.free_shipping', '');
+        const currency = _get(item, 'currency_id');
+        const amount = _get(item, 'price', '');
+        const decimals = 2;
+        const soldQuantity = _get(item, 'sold_quantity');
         return {
-            id: item.id,
-            title: item.title,
-            picture: picture.url,
-            condition: item.condition,
-            free_shipping: item.shipping.free_shipping,
+            id,
+            title,
+            picture,
+            condition,
+            free_shipping: freeShipping,
             price: {
-                currency: item.currency_id,
-                amount: item.price,
-                decimals: 2
+                currency,
+                amount,
+                decimals
             },
-            sold_quantity: item.sold_quantity,
+            sold_quantity: soldQuantity,
             description
         };
     }
