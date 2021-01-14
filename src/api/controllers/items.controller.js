@@ -1,5 +1,6 @@
 const _get = require('lodash/get');
-const { return200 } = require('../../common/js/responses');
+const { NOT_FOUND } = require('../../common/constants/responseStatus');
+const { return200, return400s } = require('../../common/js/responses');
 let _service = null;
 
 class ItemsController {
@@ -9,14 +10,26 @@ class ItemsController {
 
     async readAll(req, res) {
         const query = _get(req, 'query.q', '');
-        const result = await _service.readAll(query);
-        return200(res, result);
+        try {
+            const result = await _service.readAll(query);
+            return200(res, result);
+        } catch (err) {
+            const error = err && err.message || '';
+            const status = err && err.status || NOT_FOUND;
+            return400s({ res, error, status });
+        }
     }
 
     async readById(req, res) {
         const id = _get(req, 'params.id', '');
-        const result = await _service.readById(id);
-        return200(res, result);
+        try {
+            const result = await _service.readById(id);
+            return200(res, result);
+        } catch (err) {
+            const error = err && err.message || '';
+            const status = err && err.status || NOT_FOUND;
+            return400s({ res, error, status });
+        }
     }
 
 }
