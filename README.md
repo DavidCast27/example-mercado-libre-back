@@ -5,6 +5,14 @@ I leaving an example named example.env, to make implementation easier.
 
 You will need to download dependencies using `yarn` command
 
+## Documentation
+
+After services are up you can see the swagger of the services in [http://localhost:5000/api/docs/#/](http://localhost:5000/api/docs/#/)
+
+You can find in the docs folder 
+- postman collection
+- the mapping of the API attributes
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -2,9 +2,10 @@ openapi: 3.0.0
 info:
   title: mercado libre services example
   description:
-    Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/)
-    or HTML.
+    This is a sample server mercadolibre services. you can use those services for search some products according to a search criteria, also can use find some detail product by id
   version: 1.0.0
+  contact:
+    email: david.cast27@gmail.com
 servers:
   - url: http://localhost.com:{port}/api
     description: Local server
@@ -13,4 +14,41 @@ servers:
         enum:
           - "5000"
         default: "5000"
-        
+tags:
+- name: Items
+  description: Access to mercado libre products 
+paths:
+  /items:
+    get:
+      tags: 
+        - Items
+      summary: Get all products according to a search criteria
+      description: Find products according to a search criteria
+      parameters:
+        - in: query
+          name: q
+          required: true
+          description: filter values to consider for the search
+          schema:
+            type: string
+      responses:
+        200: 
+          description: successful operation
+  /items/{itemId}:
+    get:
+      tags: 
+        - Items
+      summary: Get Item by item id
+      description: Find products according to a search criteria
+      parameters:
+        - in: path
+          name: itemId   # Note the name is the same as in the path
+          required: true
+          schema:
+            type: string
+          description: The item id that needs to be fetched.
+      responses:
+        200: 
+          description: successful operation
+        404:
+          description: item not found

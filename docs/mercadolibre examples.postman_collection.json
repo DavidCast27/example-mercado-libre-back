@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "da2589dd-c32b-4eb2-84be-e24691e1cafb",
+		"name": "mercadolibre examples",
+		"description": "This is a sample server mercadolibre services. you can use those services for search some products according to a search criteria, also can use find some detail product by id\r\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "find all local",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/items?q=SAMSUN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"items"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SAMSUN"
+						}
+					]
+				},
+				"description": "Get all products according to a search criteria"
+			},
+			"response": []
+		},
+		{
+			"name": "find by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/items/MLA897438952A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"items",
+						"MLA897438952A"
+					]
+				},
+				"description": "Get Item by item id"
+			},
+			"response": []
+		},
+		{
+			"name": "swagger doc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"docs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
