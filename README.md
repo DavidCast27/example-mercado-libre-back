@@ -12,6 +12,7 @@ After services are up you can see the swagger of the services in [http://localho
 You can find in the docs folder 
 - postman collection
 - the mapping of the API attributes
+- Server architecture
 
 ## Available Scripts
 
